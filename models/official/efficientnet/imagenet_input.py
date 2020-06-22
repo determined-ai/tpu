@@ -226,7 +226,7 @@ class ImageNetTFExampleInput(six.with_metaclass(abc.ABCMeta, object)):
     # Retrieves the batch size for the current shard. The # of shards is
     # computed according to the input pipeline deployment. See
     # tf.estimator.tpu.RunConfig for details.
-    batch_size = params['batch_size']
+    batch_size = params["batch_size"]
 
     if 'context' in params:
       current_host = params['context'].current_input_fn_deployment()[1]
