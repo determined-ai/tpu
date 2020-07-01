@@ -26,6 +26,7 @@ import os
 from absl import logging
 import six
 import tensorflow.compat.v1 as tf
+import horovod.tensorflow as hvd
 
 import preprocessing
 
@@ -234,6 +235,8 @@ class ImageNetTFExampleInput(six.with_metaclass(abc.ABCMeta, object)):
     else:
       current_host = 0
       num_hosts = 1
+
+    num_hosts = hvd.size()
 
     dataset = self.make_source_dataset(current_host, num_hosts)
 

@@ -35,6 +35,8 @@ from tensorflow.core.protobuf import rewriter_config_pb2
 from tensorflow.python.estimator import estimator
 # pylint: enable=g-direct-tensorflow-import
 
+import horovod.tensorflow as hvd
+
 FLAGS = flags.FLAGS
 
 FAKE_DATA_DIR = 'gs://cloud-tpu-test-datasets/fake_imagenet'
@@ -383,12 +385,15 @@ def model_fn(features, labels, mode, params):
     # Compute the current epoch and associated learning rate from global_step.
     current_epoch = (
         tf.cast(global_step, tf.float32) / params['steps_per_epoch'])
-
+    FLAGS.train_batch_size //= hvd.size()
     scaled_lr = FLAGS.base_learning_rate * (FLAGS.train_batch_size / 256.0)
     logging.info('base_learning_rate = %f', FLAGS.base_learning_rate)
     learning_rate = utils.build_learning_rate(scaled_lr, global_step,
                                               params['steps_per_epoch'])
+    learning_rate *= hvd.size()
     optimizer = utils.build_optimizer(learning_rate)
+    optimizer = hvd.DistributedOptimizer(optimizer)
+
     if FLAGS.use_tpu:
       # When using TPU, wrap the optimizer with CrossShardOptimizer which
       # handles synchronization details between different TPU cores. To the
@@ -620,15 +625,18 @@ def main(unused_argv):
     save_checkpoints_steps = None
   else:
     save_checkpoints_steps = max(100, FLAGS.iterations_per_loop)
+  session_config = tf.ConfigProto(
+          graph_options=tf.GraphOptions(
+              rewrite_options=rewriter_config_pb2.RewriterConfig(
+                  disable_meta_optimizer=True)))
+  session_config.gpu_options.allow_growth = True
+  session_config.gpu_options.visible_device_list = str(hvd.local_rank())
   config = tf.estimator.tpu.RunConfig(
       cluster=tpu_cluster_resolver,
       model_dir=FLAGS.model_dir,
       save_checkpoints_steps=save_checkpoints_steps,
       log_step_count_steps=FLAGS.log_step_count_steps,
-      session_config=tf.ConfigProto(
-          graph_options=tf.GraphOptions(
-              rewrite_options=rewriter_config_pb2.RewriterConfig(
-                  disable_meta_optimizer=True))),
+      session_config=session_config,
       tpu_config=tf.estimator.tpu.TPUConfig(
           iterations_per_loop=FLAGS.iterations_per_loop,
           per_host_input_for_training=tf.estimator.tpu.InputPipelineConfig
@@ -736,18 +744,7 @@ def main(unused_argv):
 
     if FLAGS.mode == 'train':
       hooks = []
-      if FLAGS.use_async_checkpointing:
-        try:
-          from tensorflow.contrib.tpu.python.tpu import async_checkpoint  # pylint: disable=g-import-not-at-top
-        except ImportError as e:
-          logging.exception(
-              'Async checkpointing is not supported in TensorFlow 2.x')
-          raise e
-
-        hooks.append(
-            async_checkpoint.AsyncCheckpointSaverHook(
-                checkpoint_dir=FLAGS.model_dir,
-                save_steps=max(100, FLAGS.iterations_per_loop)))
+      hooks.append(hvd.BroadcastGlobalVariablesHook(0))
       est.train(
           input_fn=imagenet_train.input_fn,
           max_steps=FLAGS.train_steps,
@@ -787,5 +784,6 @@ def main(unused_argv):
 
 
 if __name__ == '__main__':
+  hvd.init()
   logging.set_verbosity(logging.INFO)
   app.run(main)
