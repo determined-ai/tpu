@@ -1,0 +1,32 @@
+# Training Schedule: https://cloud.google.com/tpu/docs/tutorials/efficientnet#training_with_pods
+
+description: efficientnet
+data:
+  data_dir: gs://cloud-tpu-test-datasets/fake_imagenet
+  # data_dir: s3://determined-imagenet-dataset/imagenet/tfrecords
+hyperparameters:
+  model_name: efficientnet-b0
+  randaug_num_layers: 2
+  randaug_magnitude: 10
+  train_batch_size: 2048
+  eval_batch_size: 1024
+  num_train_images: 1281167
+  num_eval_images: 50000
+  num_parallel_calls: 64
+  data_format: channels_last
+  num_label_classes: 1000
+  base_learning_rate: 0.016
+  momentum: 0.9
+  moving_average_decay: 0.9999
+  weight_decay: 1e-5
+  label_smoothing: 0.1
+  mixup_alpha: 0.0
+  global_batch_size: 64
+  steps_per_epoch: 10 # fake number
+searcher:
+  name: single
+  metric: top_1_accuracy
+  max_steps: 20
+  smaller_is_better: false
+entrypoint: model_def:EfficientNetEstimator
+max_restarts: 0

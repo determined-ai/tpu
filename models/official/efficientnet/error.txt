@@ -1,0 +1,338 @@
+[2020-07-21T00:10:26Z] 302586cb [PULLING] || image already found, skipping pull phase: docker.io/determinedai/environments:py-3.6.9-pytorch-1.4-tf-1.15-cpu-f2038fa
+[2020-07-21T00:10:26Z] 302586cb [STARTING] || copying files to container: /
+[2020-07-21T00:10:26Z] 302586cb [STARTING] || copying files to container: /
+[2020-07-21T00:10:26Z] 302586cb [STARTING] || copying files to container: /run/determined/workdir
+[2020-07-21T00:10:26Z] 302586cb [STARTING] || copying files to container: /
+[2020-07-21T00:10:27Z] 302586cb [RUNNING] ||  + WORKING_DIR=/run/determined/workdir
+[2020-07-21T00:10:27Z] 302586cb [RUNNING] ||  + STARTUP_HOOK=startup-hook.sh
+[2020-07-21T00:10:27Z] 302586cb [RUNNING] ||  + export PATH=/run/determined/pythonuserbase/bin:/opt/conda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+[2020-07-21T00:10:27Z] 302586cb [RUNNING] ||  + PATH=/run/determined/pythonuserbase/bin:/opt/conda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+[2020-07-21T00:10:27Z] 302586cb [RUNNING] ||  + python3.6 -m pip install --user /opt/determined/wheels/determined-0.12.12.dev0-py3-none-any.whl /opt/determined/wheels/determined_cli-0.12.12.dev0-py3-none-any.whl /opt/determined/wheels/determined_common-0.12.12.dev0-py3-none-any.whl
+[2020-07-21T00:10:27Z] 302586cb [RUNNING] ||  Processing /opt/determined/wheels/determined-0.12.12.dev0-py3-none-any.whl
+[2020-07-21T00:10:27Z] 302586cb [RUNNING] ||  Processing /opt/determined/wheels/determined_cli-0.12.12.dev0-py3-none-any.whl
+[2020-07-21T00:10:27Z] 302586cb [RUNNING] ||  Processing /opt/determined/wheels/determined_common-0.12.12.dev0-py3-none-any.whl
+[2020-07-21T00:10:27Z] 302586cb [RUNNING] ||  Requirement already satisfied: psutil in /opt/conda/lib/python3.6/site-packages (from determined==0.12.12.dev0) (5.7.2)
+[2020-07-21T00:10:27Z] 302586cb [RUNNING] ||  Requirement already satisfied: cloudpickle==0.5.3 in /opt/conda/lib/python3.6/site-packages (from determined==0.12.12.dev0) (0.5.3)
+[2020-07-21T00:10:27Z] 302586cb [RUNNING] ||  Requirement already satisfied: lomond==0.3.3 in /opt/conda/lib/python3.6/site-packages (from determined==0.12.12.dev0) (0.3.3)
+[2020-07-21T00:10:27Z] 302586cb [RUNNING] ||  Requirement already satisfied: packaging==19.0 in /opt/conda/lib/python3.6/site-packages (from determined==0.12.12.dev0) (19.0)
+[2020-07-21T00:10:27Z] 302586cb [RUNNING] ||  Requirement already satisfied: numpy>=1.16.2 in /opt/conda/lib/python3.6/site-packages (from determined==0.12.12.dev0) (1.19.0)
+[2020-07-21T00:10:27Z] 302586cb [RUNNING] ||  Requirement already satisfied: simplejson==3.16.0 in /opt/conda/lib/python3.6/site-packages (from determined==0.12.12.dev0) (3.16.0)
+[2020-07-21T00:10:27Z] 302586cb [RUNNING] ||  Requirement already satisfied: matplotlib in /opt/conda/lib/python3.6/site-packages (from determined==0.12.12.dev0) (3.2.2)
+[2020-07-21T00:10:27Z] 302586cb [RUNNING] ||  Requirement already satisfied: requests>=2.20.0 in /opt/conda/lib/python3.6/site-packages (from determined==0.12.12.dev0) (2.24.0)
+[2020-07-21T00:10:27Z] 302586cb [RUNNING] ||  Requirement already satisfied: dill>=0.2.9 in /opt/conda/lib/python3.6/site-packages (from determined==0.12.12.dev0) (0.3.2)
+[2020-07-21T00:10:27Z] 302586cb [RUNNING] ||  Requirement already satisfied: boto3>=1.9.220 in /opt/conda/lib/python3.6/site-packages (from determined==0.12.12.dev0) (1.14.21)
+[2020-07-21T00:10:28Z] 302586cb [RUNNING] ||  Collecting yogadl==0.1.1
+[2020-07-21T00:10:28Z] 302586cb [RUNNING] ||    Using cached yogadl-0.1.1-py3-none-any.whl (32 kB)
+[2020-07-21T00:10:28Z] 302586cb [RUNNING] ||  Requirement already satisfied: h5py>=2.9.0 in /opt/conda/lib/python3.6/site-packages (from determined==0.12.12.dev0) (2.10.0)
+[2020-07-21T00:10:28Z] 302586cb [RUNNING] ||  Requirement already satisfied: pyzmq==18.1.0 in /opt/conda/lib/python3.6/site-packages (from determined==0.12.12.dev0) (18.1.0)
+[2020-07-21T00:10:28Z] 302586cb [RUNNING] ||  Requirement already satisfied: gitpython==2.1.11 in /opt/conda/lib/python3.6/site-packages (from determined-cli==0.12.12.dev0) (2.1.11)
+[2020-07-21T00:10:28Z] 302586cb [RUNNING] ||  Requirement already satisfied: python-dateutil==2.8.0 in /opt/conda/lib/python3.6/site-packages (from determined-cli==0.12.12.dev0) (2.8.0)
+[2020-07-21T00:10:28Z] 302586cb [RUNNING] ||  Requirement already satisfied: pyOpenSSL>=19.1.0 in /opt/conda/lib/python3.6/site-packages (from determined-cli==0.12.12.dev0) (19.1.0)
+[2020-07-21T00:10:28Z] 302586cb [RUNNING] ||  Requirement already satisfied: ruamel.yaml>=0.15.78 in /opt/conda/lib/python3.6/site-packages (from determined-cli==0.12.12.dev0) (0.16.10)
+[2020-07-21T00:10:28Z] 302586cb [RUNNING] ||  Requirement already satisfied: tabulate>=0.8.3 in /opt/conda/lib/python3.6/site-packages (from determined-cli==0.12.12.dev0) (0.8.7)
+[2020-07-21T00:10:28Z] 302586cb [RUNNING] ||  Requirement already satisfied: termcolor==1.1.0 in /opt/conda/lib/python3.6/site-packages (from determined-cli==0.12.12.dev0) (1.1.0)
+[2020-07-21T00:10:28Z] 302586cb [RUNNING] ||  Requirement already satisfied: argcomplete==1.9.4 in /opt/conda/lib/python3.6/site-packages (from determined-cli==0.12.12.dev0) (1.9.4)
+[2020-07-21T00:10:28Z] 302586cb [RUNNING] ||  Requirement already satisfied: hdfs>=2.2.2 in /opt/conda/lib/python3.6/site-packages (from determined-common==0.12.12.dev0) (2.5.8)
+[2020-07-21T00:10:28Z] 302586cb [RUNNING] ||  Requirement already satisfied: pathspec>=0.6.0 in /opt/conda/lib/python3.6/site-packages (from determined-common==0.12.12.dev0) (0.8.0)
+[2020-07-21T00:10:28Z] 302586cb [RUNNING] ||  Requirement already satisfied: google-cloud-storage>=1.20.0 in /opt/conda/lib/python3.6/site-packages (from determined-common==0.12.12.dev0) (1.29.0)
+[2020-07-21T00:10:28Z] 302586cb [RUNNING] ||  Requirement already satisfied: six>=1.10.0 in /opt/conda/lib/python3.6/site-packages (from lomond==0.3.3->determined==0.12.12.dev0) (1.15.0)
+[2020-07-21T00:10:28Z] 302586cb [RUNNING] ||  Requirement already satisfied: pyparsing>=2.0.2 in /opt/conda/lib/python3.6/site-packages (from packaging==19.0->determined==0.12.12.dev0) (2.4.7)
+[2020-07-21T00:10:28Z] 302586cb [RUNNING] ||  Requirement already satisfied: cycler>=0.10 in /opt/conda/lib/python3.6/site-packages (from matplotlib->determined==0.12.12.dev0) (0.10.0)
+[2020-07-21T00:10:28Z] 302586cb [RUNNING] ||  Requirement already satisfied: kiwisolver>=1.0.1 in /opt/conda/lib/python3.6/site-packages (from matplotlib->determined==0.12.12.dev0) (1.2.0)
+[2020-07-21T00:10:28Z] 302586cb [RUNNING] ||  Requirement already satisfied: certifi>=2017.4.17 in /opt/conda/lib/python3.6/site-packages (from requests>=2.20.0->determined==0.12.12.dev0) (2020.6.20)
+[2020-07-21T00:10:28Z] 302586cb [RUNNING] ||  Requirement already satisfied: idna<3,>=2.5 in /opt/conda/lib/python3.6/site-packages (from requests>=2.20.0->determined==0.12.12.dev0) (2.10)
+[2020-07-21T00:10:28Z] 302586cb [RUNNING] ||  Requirement already satisfied: urllib3!=1.25.0,!=1.25.1,<1.26,>=1.21.1 in /opt/conda/lib/python3.6/site-packages (from requests>=2.20.0->determined==0.12.12.dev0) (1.25.8)
+[2020-07-21T00:10:28Z] 302586cb [RUNNING] ||  Requirement already satisfied: chardet<4,>=3.0.2 in /opt/conda/lib/python3.6/site-packages (from requests>=2.20.0->determined==0.12.12.dev0) (3.0.4)
+[2020-07-21T00:10:28Z] 302586cb [RUNNING] ||  Requirement already satisfied: s3transfer<0.4.0,>=0.3.0 in /opt/conda/lib/python3.6/site-packages (from boto3>=1.9.220->determined==0.12.12.dev0) (0.3.3)
+[2020-07-21T00:10:28Z] 302586cb [RUNNING] ||  Requirement already satisfied: jmespath<1.0.0,>=0.7.1 in /opt/conda/lib/python3.6/site-packages (from boto3>=1.9.220->determined==0.12.12.dev0) (0.10.0)
+[2020-07-21T00:10:28Z] 302586cb [RUNNING] ||  Requirement already satisfied: botocore<1.18.0,>=1.17.21 in /opt/conda/lib/python3.6/site-packages (from boto3>=1.9.220->determined==0.12.12.dev0) (1.17.21)
+[2020-07-21T00:10:28Z] 302586cb [RUNNING] ||  Requirement already satisfied: websockets in /opt/conda/lib/python3.6/site-packages (from yogadl==0.1.1->determined==0.12.12.dev0) (8.1)
+[2020-07-21T00:10:28Z] 302586cb [RUNNING] ||  Requirement already satisfied: async-generator in /opt/conda/lib/python3.6/site-packages (from yogadl==0.1.1->determined==0.12.12.dev0) (1.10)
+[2020-07-21T00:10:28Z] 302586cb [RUNNING] ||  Requirement already satisfied: lmdb in /opt/conda/lib/python3.6/site-packages (from yogadl==0.1.1->determined==0.12.12.dev0) (0.98)
+[2020-07-21T00:10:28Z] 302586cb [RUNNING] ||  Requirement already satisfied: filelock in /opt/conda/lib/python3.6/site-packages (from yogadl==0.1.1->determined==0.12.12.dev0) (3.0.12)
+[2020-07-21T00:10:28Z] 302586cb [RUNNING] ||  Requirement already satisfied: gitdb2>=2.0.0 in /opt/conda/lib/python3.6/site-packages (from gitpython==2.1.11->determined-cli==0.12.12.dev0) (4.0.2)
+[2020-07-21T00:10:28Z] 302586cb [RUNNING] ||  Requirement already satisfied: cryptography>=2.8 in /opt/conda/lib/python3.6/site-packages (from pyOpenSSL>=19.1.0->determined-cli==0.12.12.dev0) (2.9.2)
+[2020-07-21T00:10:28Z] 302586cb [RUNNING] ||  Requirement already satisfied: ruamel.yaml.clib>=0.1.2; platform_python_implementation == "CPython" and python_version < "3.9" in /opt/conda/lib/python3.6/site-packages (from ruamel.yaml>=0.15.78->determined-cli==0.12.12.dev0) (0.2.0)
+[2020-07-21T00:10:28Z] 302586cb [RUNNING] ||  Requirement already satisfied: docopt in /opt/conda/lib/python3.6/site-packages (from hdfs>=2.2.2->determined-common==0.12.12.dev0) (0.6.2)
+[2020-07-21T00:10:28Z] 302586cb [RUNNING] ||  Requirement already satisfied: google-cloud-core<2.0dev,>=1.2.0 in /opt/conda/lib/python3.6/site-packages (from google-cloud-storage>=1.20.0->determined-common==0.12.12.dev0) (1.3.0)
+[2020-07-21T00:10:28Z] 302586cb [RUNNING] ||  Requirement already satisfied: google-resumable-media<0.6dev,>=0.5.0 in /opt/conda/lib/python3.6/site-packages (from google-cloud-storage>=1.20.0->determined-common==0.12.12.dev0) (0.5.1)
+[2020-07-21T00:10:28Z] 302586cb [RUNNING] ||  Requirement already satisfied: google-auth<2.0dev,>=1.11.0 in /opt/conda/lib/python3.6/site-packages (from google-cloud-storage>=1.20.0->determined-common==0.12.12.dev0) (1.19.1)
+[2020-07-21T00:10:28Z] 302586cb [RUNNING] ||  Requirement already satisfied: docutils<0.16,>=0.10 in /opt/conda/lib/python3.6/site-packages (from botocore<1.18.0,>=1.17.21->boto3>=1.9.220->determined==0.12.12.dev0) (0.15.2)
+[2020-07-21T00:10:28Z] 302586cb [RUNNING] ||  Requirement already satisfied: gitdb>=4.0.1 in /opt/conda/lib/python3.6/site-packages (from gitdb2>=2.0.0->gitpython==2.1.11->determined-cli==0.12.12.dev0) (4.0.5)
+[2020-07-21T00:10:28Z] 302586cb [RUNNING] ||  Requirement already satisfied: cffi!=1.11.3,>=1.8 in /opt/conda/lib/python3.6/site-packages (from cryptography>=2.8->pyOpenSSL>=19.1.0->determined-cli==0.12.12.dev0) (1.14.0)
+[2020-07-21T00:10:28Z] 302586cb [RUNNING] ||  Requirement already satisfied: google-api-core<2.0.0dev,>=1.16.0 in /opt/conda/lib/python3.6/site-packages (from google-cloud-core<2.0dev,>=1.2.0->google-cloud-storage>=1.20.0->determined-common==0.12.12.dev0) (1.21.0)
+[2020-07-21T00:10:28Z] 302586cb [RUNNING] ||  Requirement already satisfied: pyasn1-modules>=0.2.1 in /opt/conda/lib/python3.6/site-packages (from google-auth<2.0dev,>=1.11.0->google-cloud-storage>=1.20.0->determined-common==0.12.12.dev0) (0.2.8)
+[2020-07-21T00:10:28Z] 302586cb [RUNNING] ||  Requirement already satisfied: rsa<5,>=3.1.4; python_version >= "3" in /opt/conda/lib/python3.6/site-packages (from google-auth<2.0dev,>=1.11.0->google-cloud-storage>=1.20.0->determined-common==0.12.12.dev0) (4.6)
+[2020-07-21T00:10:28Z] 302586cb [RUNNING] ||  Requirement already satisfied: cachetools<5.0,>=2.0.0 in /opt/conda/lib/python3.6/site-packages (from google-auth<2.0dev,>=1.11.0->google-cloud-storage>=1.20.0->determined-common==0.12.12.dev0) (4.1.1)
+[2020-07-21T00:10:28Z] 302586cb [RUNNING] ||  Requirement already satisfied: setuptools>=40.3.0 in /opt/conda/lib/python3.6/site-packages (from google-auth<2.0dev,>=1.11.0->google-cloud-storage>=1.20.0->determined-common==0.12.12.dev0) (49.2.0.post20200714)
+[2020-07-21T00:10:28Z] 302586cb [RUNNING] ||  Requirement already satisfied: smmap<4,>=3.0.1 in /opt/conda/lib/python3.6/site-packages (from gitdb>=4.0.1->gitdb2>=2.0.0->gitpython==2.1.11->determined-cli==0.12.12.dev0) (3.0.4)
+[2020-07-21T00:10:28Z] 302586cb [RUNNING] ||  Requirement already satisfied: pycparser in /opt/conda/lib/python3.6/site-packages (from cffi!=1.11.3,>=1.8->cryptography>=2.8->pyOpenSSL>=19.1.0->determined-cli==0.12.12.dev0) (2.20)
+[2020-07-21T00:10:28Z] 302586cb [RUNNING] ||  Requirement already satisfied: googleapis-common-protos<2.0dev,>=1.6.0 in /opt/conda/lib/python3.6/site-packages (from google-api-core<2.0.0dev,>=1.16.0->google-cloud-core<2.0dev,>=1.2.0->google-cloud-storage>=1.20.0->determined-common==0.12.12.dev0) (1.52.0)
+[2020-07-21T00:10:28Z] 302586cb [RUNNING] ||  Requirement already satisfied: pytz in /opt/conda/lib/python3.6/site-packages (from google-api-core<2.0.0dev,>=1.16.0->google-cloud-core<2.0dev,>=1.2.0->google-cloud-storage>=1.20.0->determined-common==0.12.12.dev0) (2020.1)
+[2020-07-21T00:10:28Z] 302586cb [RUNNING] ||  Requirement already satisfied: protobuf>=3.12.0 in /opt/conda/lib/python3.6/site-packages (from google-api-core<2.0.0dev,>=1.16.0->google-cloud-core<2.0dev,>=1.2.0->google-cloud-storage>=1.20.0->determined-common==0.12.12.dev0) (3.12.2)
+[2020-07-21T00:10:28Z] 302586cb [RUNNING] ||  Requirement already satisfied: pyasn1<0.5.0,>=0.4.6 in /opt/conda/lib/python3.6/site-packages (from pyasn1-modules>=0.2.1->google-auth<2.0dev,>=1.11.0->google-cloud-storage>=1.20.0->determined-common==0.12.12.dev0) (0.4.8)
+[2020-07-21T00:10:28Z] 302586cb [RUNNING] ||  Installing collected packages: determined-common, yogadl, determined, determined-cli
+[2020-07-21T00:10:29Z] 302586cb [RUNNING] ||  Successfully installed determined-0.12.12.dev0 determined-cli-0.12.12.dev0 determined-common-0.12.12.dev0 yogadl-0.1.1
+[2020-07-21T00:10:29Z] 302586cb [RUNNING] ||  + cd /run/determined/workdir
+[2020-07-21T00:10:29Z] 302586cb [RUNNING] ||  + test -f startup-hook.sh
+[2020-07-21T00:10:29Z] 302586cb [RUNNING] ||  + exec python3.6 -m determined.exec.harness
+[2020-07-21T00:10:30Z] 302586cb [RUNNING] ||  INFO: New trial runner in (container 302586cb-04a3-4516-ab24-54f76680fce2) on agent Brians-MBP.hsd1.ca.comcast.net: {'master_addr': 'host.docker.internal', 'master_port': 8080, 'container_id': '302586cb-04a3-4516-ab24-54f76680fce2', 'experiment_config': {'description': 'efficientnet', 'data': {'data_dir': 'gs://cloud-tpu-test-datasets/fake_imagenet'}, 'checkpoint_storage': {'host_path': '/tmp', 'save_experiment_best': 0, 'save_trial_best': 1, 'save_trial_latest': 1, 'storage_path': 'determined-checkpoint', 'type': 'shared_fs'}, 'min_checkpoint_period': None, 'min_validation_period': None, 'checkpoint_policy': 'best', 'hyperparameters': {'base_learning_rate': {'type': 'const', 'val': 0.016}, 'data_format': {'type': 'const', 'val': 'channels_last'}, 'eval_batch_size': {'type': 'const', 'val': 1024}, 'global_batch_size': {'type': 'const', 'val': 64}, 'label_smoothing': {'type': 'const', 'val': 0.1}, 'mixup_alpha': {'type': 'const', 'val': 0}, 'model_name': {'type': 'const', 'val': 'efficientnet-b0'}, 'momentum': {'type': 'const', 'val': 0.9}, 'moving_average_decay': {'type': 'const', 'val': 0.9999}, 'num_eval_images': {'type': 'const', 'val': 50000}, 'num_label_classes': {'type': 'const', 'val': 1000}, 'num_parallel_calls': {'type': 'const', 'val': 64}, 'num_train_images': {'type': 'const', 'val': 1281167}, 'randaug_magnitude': {'type': 'const', 'val': 10}, 'randaug_num_layers': {'type': 'const', 'val': 2}, 'steps_per_epoch': {'type': 'const', 'val': 10}, 'train_batch_size': {'type': 'const', 'val': 2048}, 'weight_decay': {'type': 'const', 'val': 1e-05}}, 'searcher': {'max_steps': 20, 'metric': 'top_1_accuracy', 'name': 'single', 'smaller_is_better': False, 'source_checkpoint_uuid': None, 'source_trial_id': None}, 'resources': {'slots_per_trial': 1, 'weight': 1, 'native_parallel': False, 'agent_label': ''}, 'optimizations': {'aggregation_frequency': 1, 'average_aggregated_gradients': True, 'average_training_metrics': False, 'gradient_compression': False, 'mixed_precision': 'O0', 'tensor_fusion_threshold': 64, 'tensor_fusion_cycle_time': 5, 'auto_tune_tensor_fusion': False}, 'batches_per_step': 100, 'environment': {'image': {'cpu': 'determinedai/environments:py-3.6.9-pytorch-1.4-tf-1.15-cpu-f2038fa', 'gpu': 'determinedai/environments:cuda-10.0-pytorch-1.4-tf-1.15-gpu-f2038fa'}, 'environment_variables': {}, 'ports': None, 'force_pull_image': False}, 'reproducibility': {'experiment_seed': 1595290225}, 'max_restarts': 0, 'debug': False, 'internal': None, 'entrypoint': 'model_def:EfficientNetEstimator', 'data_layer': {'container_storage_path': None, 'type': 'shared_fs'}}, 'hparams': {'base_learning_rate': 0.016, 'data_format': 'channels_last', 'eval_batch_size': 1024, 'global_batch_size': 64, 'label_smoothing': 0.1, 'mixup_alpha': 0, 'model_name': 'efficientnet-b0', 'momentum': 0.9, 'moving_average_decay': 0.9999, 'num_eval_images': 50000, 'num_label_classes': 1000, 'num_parallel_calls': 64, 'num_train_images': 1281167, 'randaug_magnitude': 10, 'randaug_num_layers': 2, 'steps_per_epoch': 10, 'train_batch_size': 2048, 'weight_decay': 1e-05}, 'initial_workload': <RUN_STEP (100): (25,25,1)>, 'latest_checkpoint': None, 'use_gpu': 0, 'container_gpus': [], 'slot_ids': [0], 'debug': False, 'workload_manager_type': 'TRIAL_WORKLOAD_MANAGER', 'det_rendezvous_ports': '1734,1750', 'det_trial_runner_network_interface': 'DET_AUTO_DETECT_NETWORK_INTERFACE', 'det_trial_id': '25', 'det_experiment_id': '25', 'det_cluster_id': '6cef7a8b-5b7f-4920-aaad-9c3ab46b43ff', 'trial_seed': 1625032762, '_per_slot_batch_size': 64, '_global_batch_size': 64}.
+[2020-07-21T00:10:30Z] 302586cb [RUNNING] ||  INFO: Connecting to master at ws://host.docker.internal:8080/ws/trial/25/25/302586cb-04a3-4516-ab24-54f76680fce2
+[2020-07-21T00:10:30Z] 302586cb [RUNNING] ||  INFO: Connected to master
+[2020-07-21T00:10:30Z] 302586cb [RUNNING] ||  INFO: Established WebSocket session with master
+[2020-07-21T00:10:30Z] 302586cb [RUNNING] ||  INFO: Got rendezvous information: {'addrs': ['[::1]:1734'], 'addrs2': ['[::1]:1750'], 'containers': [{'addresses': [{'container_ip': '[::1]', 'container_port': 1734, 'host_ip': '[::1]', 'host_port': 1734, 'protocol': 'tcp'}, {'container_ip': '[::1]', 'container_port': 1750, 'host_ip': '[::1]', 'host_port': 1750, 'protocol': 'tcp'}]}], 'rank': 0, 'type': 'RENDEZVOUS_INFO'}
+[2020-07-21T00:10:34Z] 302586cb [RUNNING] ||  INFO: Horovod config: {'use': False, 'aggregation_frequency': 1, 'fp16_compression': False, 'grad_updates_size_file': None, 'average_aggregated_gradients': True, 'average_training_metrics': False}.
+[2020-07-21T00:10:34Z] 302586cb [RUNNING] ||  INFO: Loading Trial implementation with entrypoint model_def:EfficientNetEstimator.
+[2020-07-21T00:10:34Z] 302586cb [RUNNING] ||  INFO: Creating EstimatorTrialController with EfficientNetEstimator.
+[2020-07-21T00:10:34Z] 302586cb [RUNNING] ||  WARNING: Using temporary folder as model directory: /tmp/tmpkw729caz
+[2020-07-21T00:10:34Z] 302586cb [RUNNING] ||  INFO: Using config: {'_model_dir': '/tmp/tmpkw729caz', '_tf_random_seed': None, '_save_summary_steps': 1000, '_save_checkpoints_steps': None, '_save_checkpoints_secs': 600, '_session_config': allow_soft_placement: true
+[2020-07-21T00:10:34Z] 302586cb [RUNNING] ||  graph_options {
+[2020-07-21T00:10:34Z] 302586cb [RUNNING] ||    rewrite_options {
+[2020-07-21T00:10:34Z] 302586cb [RUNNING] ||      meta_optimizer_iterations: ONE
+[2020-07-21T00:10:34Z] 302586cb [RUNNING] ||    }
+[2020-07-21T00:10:34Z] 302586cb [RUNNING] ||  }
+[2020-07-21T00:10:34Z] 302586cb [RUNNING] ||  , '_keep_checkpoint_max': 5, '_keep_checkpoint_every_n_hours': 10000, '_log_step_count_steps': 100, '_train_distribute': None, '_device_fn': None, '_protocol': None, '_eval_distribute': None, '_experimental_distribute': None, '_experimental_max_worker_delay_secs': None, '_session_creation_timeout_secs': 7200, '_service': None, '_cluster_spec': <tensorflow.python.training.server_lib.ClusterSpec object at 0x7fe220d778d0>, '_task_type': 'worker', '_task_id': 0, '_global_id_in_cluster': 0, '_master': '', '_evaluation_master': '', '_is_chief': True, '_num_ps_replicas': 0, '_num_worker_replicas': 1}
+[2020-07-21T00:10:34Z] 302586cb [RUNNING] ||  WARNING: Estimator's model_fn (<function make_model_fn.<locals>.model_fn at 0x7fe296949400>) includes params argument, but params are not passed to Estimator.
+[2020-07-21T00:10:34Z] 302586cb [RUNNING] ||  INFO: Using dataset: gs://cloud-tpu-test-datasets/fake_imagenet
+[2020-07-21T00:10:34Z] 302586cb [RUNNING] ||  INFO: Using dataset: gs://cloud-tpu-test-datasets/fake_imagenet
+[2020-07-21T00:10:34Z] 302586cb [RUNNING] ||  INFO: Using config: {'_model_dir': '/tmp/tmpcl5drjkh0', '_tf_random_seed': 1625032762, '_save_summary_steps': 1000, '_save_checkpoints_steps': None, '_save_checkpoints_secs': 9999999999999999, '_session_config': allow_soft_placement: true
+[2020-07-21T00:10:34Z] 302586cb [RUNNING] ||  graph_options {
+[2020-07-21T00:10:34Z] 302586cb [RUNNING] ||    rewrite_options {
+[2020-07-21T00:10:34Z] 302586cb [RUNNING] ||      meta_optimizer_iterations: ONE
+[2020-07-21T00:10:34Z] 302586cb [RUNNING] ||    }
+[2020-07-21T00:10:34Z] 302586cb [RUNNING] ||  }
+[2020-07-21T00:10:34Z] 302586cb [RUNNING] ||  , '_keep_checkpoint_max': 5, '_keep_checkpoint_every_n_hours': 10000, '_log_step_count_steps': 100, '_train_distribute': None, '_device_fn': None, '_protocol': None, '_eval_distribute': None, '_experimental_distribute': None, '_experimental_max_worker_delay_secs': None, '_session_creation_timeout_secs': 7200, '_service': None, '_cluster_spec': <tensorflow.python.training.server_lib.ClusterSpec object at 0x7fe220d77cf8>, '_task_type': 'worker', '_task_id': 0, '_global_id_in_cluster': 0, '_master': '', '_evaluation_master': '', '_is_chief': True, '_num_ps_replicas': 0, '_num_worker_replicas': 1}
+[2020-07-21T00:10:34Z] 302586cb [RUNNING] ||  WARNING: Estimator's model_fn (<function make_model_fn.<locals>.model_fn at 0x7fe296949400>) includes params argument, but params are not passed to Estimator.
+[2020-07-21T00:10:34Z] 302586cb [RUNNING] ||  INFO: Not using Distribute Coordinator.
+[2020-07-21T00:10:34Z] 302586cb [RUNNING] ||  INFO: Running training and evaluation locally (non-distributed).
+[2020-07-21T00:10:34Z] 302586cb [RUNNING] ||  INFO: Start train and evaluate loop. The evaluate will happen after every checkpoint. Checkpoint frequency is determined based on RunConfig arguments: save_checkpoints_steps None or save_checkpoints_secs 9999999999999999.
+[2020-07-21T00:10:34Z] 302586cb [RUNNING] ||  WARNING: From /opt/conda/lib/python3.6/site-packages/tensorflow_core/python/training/training_util.py:236: Variable.initialized_value (from tensorflow.python.ops.variables) is deprecated and will be removed in a future version.
+[2020-07-21T00:10:34Z] 302586cb [RUNNING] ||  Instructions for updating:
+[2020-07-21T00:10:34Z] 302586cb [RUNNING] ||  Use Variable.read_value. Variables in 2.X are initialized automatically both in eager and graph (inside tf.defun) contexts.
+[2020-07-21T00:10:34Z] 302586cb [RUNNING] ||  WARNING: From /run/determined/workdir/imagenet_input.py:400: parallel_interleave (from tensorflow.python.data.experimental.ops.interleave_ops) is deprecated and will be removed in a future version.
+[2020-07-21T00:10:34Z] 302586cb [RUNNING] ||  Instructions for updating:
+[2020-07-21T00:10:34Z] 302586cb [RUNNING] ||  Use `tf.data.Dataset.interleave(map_func, cycle_length, block_length, num_parallel_calls=tf.data.experimental.AUTOTUNE)` instead. If sloppy execution is desired, use `tf.data.Options.experimental_determinstic`.
+[2020-07-21T00:10:35Z] 302586cb [RUNNING] ||  WARNING: From /opt/conda/lib/python3.6/site-packages/tensorflow_core/python/data/util/random_seed.py:58: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+[2020-07-21T00:10:35Z] 302586cb [RUNNING] ||  Instructions for updating:
+[2020-07-21T00:10:35Z] 302586cb [RUNNING] ||  Use tf.where in 2.0, which has the same broadcast rule as np.where
+[2020-07-21T00:10:35Z] 302586cb [RUNNING] ||  WARNING: From /run/determined/workdir/imagenet_input.py:252: map_and_batch (from tensorflow.python.data.experimental.ops.batching) is deprecated and will be removed in a future version.
+[2020-07-21T00:10:35Z] 302586cb [RUNNING] ||  Instructions for updating:
+[2020-07-21T00:10:35Z] 302586cb [RUNNING] ||  Use `tf.data.Dataset.map(map_func, num_parallel_calls)` followed by `tf.data.Dataset.batch(batch_size, drop_remainder)`. Static tf.data optimizations will take care of using the fused implementation.
+[2020-07-21T00:10:35Z] 302586cb [RUNNING] ||  WARNING: Entity <function preprocess_for_train at 0x7fe296925488> could not be transformed and will be executed as-is. Please report this to the AutoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: If not matching a CFG node, must be a block statement: <gast.gast.Import object at 0x7fe218565fd0>
+[2020-07-21T00:10:35Z] 302586cb [RUNNING] ||  WARNING: From /run/determined/workdir/preprocessing.py:69: sample_distorted_bounding_box (from tensorflow.python.ops.image_ops_impl) is deprecated and will be removed in a future version.
+[2020-07-21T00:10:35Z] 302586cb [RUNNING] ||  Instructions for updating:
+[2020-07-21T00:10:35Z] 302586cb [RUNNING] ||  `seed2` arg is deprecated.Use sample_distorted_bounding_box_v2 instead.
+[2020-07-21T00:10:35Z] 302586cb [RUNNING] ||  INFO: Use default resize_bicubic.
+[2020-07-21T00:10:35Z] 302586cb [RUNNING] ||  INFO: Use default resize_bicubic.
+[2020-07-21T00:10:35Z] 302586cb [RUNNING] ||  2020-07-21 00:10:35.967899: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
+[2020-07-21T00:10:35Z] 302586cb [RUNNING] ||  2020-07-21 00:10:35.968907: E tensorflow/stream_executor/cuda/cuda_driver.cc:318] failed call to cuInit: UNKNOWN ERROR (303)
+[2020-07-21T00:10:35Z] 302586cb [RUNNING] ||  2020-07-21 00:10:35.969003: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (docker-desktop): /proc/driver/nvidia/version does not exist
+[2020-07-21T00:10:35Z] 302586cb [RUNNING] ||  /opt/conda/lib/python3.6/site-packages/tensorflow_core/python/data/ops/dataset_ops.py:1378: UserWarning: Seed 1625032762 from outer graph might be getting used by function tf_data_experimental_map_and_batch_ImageNetInput.dataset_parser, if the random op has not been provided any seed. Explicitly set the seed in the function if this is not the intended behavior.
+[2020-07-21T00:10:35Z] 302586cb [RUNNING] ||    dataset = transformation_func(self)
+[2020-07-21T00:10:36Z] 302586cb [RUNNING] ||  INFO: Calling model_fn.
+[2020-07-21T00:10:36Z] 302586cb [RUNNING] ||  INFO: Using open-source implementation.
+[2020-07-21T00:10:36Z] 302586cb [RUNNING] ||  INFO: global_params= GlobalParams(batch_norm_momentum=0.99, batch_norm_epsilon=0.001, dropout_rate=0.2, data_format='channels_last', num_classes=1000, width_coefficient=1.0, depth_coefficient=1.0, depth_divisor=8, min_depth=None, survival_prob=0.8, relu_fn=<function swish at 0x7fe280136840>, batch_norm=<class 'utils.TpuBatchNormalization'>, use_se=True, se_coefficient=None, local_pooling=None, condconv_num_experts=None, clip_projection_output=False, blocks_args=['r1_k3_s11_e1_i32_o16_se0.25', 'r2_k3_s22_e6_i16_o24_se0.25', 'r2_k5_s22_e6_i24_o40_se0.25', 'r3_k3_s22_e6_i40_o80_se0.25', 'r3_k5_s11_e6_i80_o112_se0.25', 'r4_k5_s22_e6_i112_o192_se0.25', 'r1_k3_s11_e6_i192_o320_se0.25'], fix_head_stem=None)
+[2020-07-21T00:10:36Z] 302586cb [RUNNING] ||  INFO: round_filter input=32 output=32
+[2020-07-21T00:10:36Z] 302586cb [RUNNING] ||  INFO: round_filter input=32 output=32
+[2020-07-21T00:10:36Z] 302586cb [RUNNING] ||  INFO: round_filter input=16 output=16
+[2020-07-21T00:10:36Z] 302586cb [RUNNING] ||  INFO: round_filter input=16 output=16
+[2020-07-21T00:10:36Z] 302586cb [RUNNING] ||  INFO: round_filter input=24 output=24
+[2020-07-21T00:10:36Z] 302586cb [RUNNING] ||  INFO: round_filter input=24 output=24
+[2020-07-21T00:10:36Z] 302586cb [RUNNING] ||  INFO: round_filter input=40 output=40
+[2020-07-21T00:10:36Z] 302586cb [RUNNING] ||  INFO: round_filter input=40 output=40
+[2020-07-21T00:10:36Z] 302586cb [RUNNING] ||  INFO: round_filter input=80 output=80
+[2020-07-21T00:10:36Z] 302586cb [RUNNING] ||  INFO: round_filter input=80 output=80
+[2020-07-21T00:10:36Z] 302586cb [RUNNING] ||  INFO: round_filter input=112 output=112
+[2020-07-21T00:10:36Z] 302586cb [RUNNING] ||  INFO: round_filter input=112 output=112
+[2020-07-21T00:10:36Z] 302586cb [RUNNING] ||  INFO: round_filter input=192 output=192
+[2020-07-21T00:10:36Z] 302586cb [RUNNING] ||  INFO: round_filter input=192 output=192
+[2020-07-21T00:10:36Z] 302586cb [RUNNING] ||  INFO: round_filter input=320 output=320
+[2020-07-21T00:10:36Z] 302586cb [RUNNING] ||  INFO: round_filter input=1280 output=1280
+[2020-07-21T00:10:38Z] 302586cb [RUNNING] ||  WARNING: From /opt/conda/lib/python3.6/site-packages/tensorflow_core/python/ops/resource_variable_ops.py:1630: calling BaseResourceVariable.__init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
+[2020-07-21T00:10:38Z] 302586cb [RUNNING] ||  Instructions for updating:
+[2020-07-21T00:10:38Z] 302586cb [RUNNING] ||  If using Keras pass *_constraint arguments to layers.
+[2020-07-21T00:10:38Z] 302586cb [RUNNING] ||  INFO: TpuBatchNormalization with num_shards_per_group 1
+[2020-07-21T00:10:42Z] 302586cb [RUNNING] ||  INFO: Built stem layers with output shape: (64, 112, 112, 32)
+[2020-07-21T00:10:42Z] 302586cb [RUNNING] ||  INFO: block_0 survival_prob: 1.0
+[2020-07-21T00:10:43Z] 302586cb [RUNNING] ||  INFO: Block input: efficientnet-b0/model/stem/IdentityN:0 shape: (64, 112, 112, 32)
+[2020-07-21T00:10:43Z] 302586cb [RUNNING] ||  INFO: Block input depth: 32 output depth: 16
+[2020-07-21T00:10:43Z] 302586cb [RUNNING] ||  INFO: TpuBatchNormalization with num_shards_per_group 1
+[2020-07-21T00:10:43Z] 302586cb [RUNNING] ||  INFO: DWConv: efficientnet-b0/model/blocks_0/IdentityN:0 shape: (64, 112, 112, 32)
+[2020-07-21T00:10:44Z] 302586cb [RUNNING] ||  INFO: Built Squeeze and Excitation with tensor shape: (64, 1, 1, 32)
+[2020-07-21T00:10:44Z] 302586cb [RUNNING] ||  INFO: TpuBatchNormalization with num_shards_per_group 1
+[2020-07-21T00:10:44Z] 302586cb [RUNNING] ||  INFO: Project: efficientnet-b0/model/blocks_0/Identity_1:0 shape: (64, 112, 112, 16)
+[2020-07-21T00:10:44Z] 302586cb [RUNNING] ||  INFO: block_1 survival_prob: 0.9875
+[2020-07-21T00:10:44Z] 302586cb [RUNNING] ||  INFO: Block input: efficientnet-b0/model/blocks_0/Identity_1:0 shape: (64, 112, 112, 16)
+[2020-07-21T00:10:44Z] 302586cb [RUNNING] ||  INFO: Block input depth: 16 output depth: 24
+[2020-07-21T00:10:44Z] 302586cb [RUNNING] ||  INFO: TpuBatchNormalization with num_shards_per_group 1
+[2020-07-21T00:10:44Z] 302586cb [RUNNING] ||  INFO: Expand: efficientnet-b0/model/blocks_1/IdentityN:0 shape: (64, 112, 112, 96)
+[2020-07-21T00:10:44Z] 302586cb [RUNNING] ||  INFO: TpuBatchNormalization with num_shards_per_group 1
+[2020-07-21T00:10:44Z] 302586cb [RUNNING] ||  INFO: DWConv: efficientnet-b0/model/blocks_1/IdentityN_1:0 shape: (64, 56, 56, 96)
+[2020-07-21T00:10:44Z] 302586cb [RUNNING] ||  INFO: Built Squeeze and Excitation with tensor shape: (64, 1, 1, 96)
+[2020-07-21T00:10:44Z] 302586cb [RUNNING] ||  INFO: TpuBatchNormalization with num_shards_per_group 1
+[2020-07-21T00:10:44Z] 302586cb [RUNNING] ||  INFO: Project: efficientnet-b0/model/blocks_1/Identity_2:0 shape: (64, 56, 56, 24)
+[2020-07-21T00:10:44Z] 302586cb [RUNNING] ||  INFO: block_2 survival_prob: 0.975
+[2020-07-21T00:10:44Z] 302586cb [RUNNING] ||  INFO: Block input: efficientnet-b0/model/blocks_1/Identity_2:0 shape: (64, 56, 56, 24)
+[2020-07-21T00:10:44Z] 302586cb [RUNNING] ||  INFO: Block input depth: 24 output depth: 24
+[2020-07-21T00:10:44Z] 302586cb [RUNNING] ||  INFO: TpuBatchNormalization with num_shards_per_group 1
+[2020-07-21T00:10:44Z] 302586cb [RUNNING] ||  INFO: Expand: efficientnet-b0/model/blocks_2/IdentityN:0 shape: (64, 56, 56, 144)
+[2020-07-21T00:10:44Z] 302586cb [RUNNING] ||  INFO: TpuBatchNormalization with num_shards_per_group 1
+[2020-07-21T00:10:44Z] 302586cb [RUNNING] ||  INFO: DWConv: efficientnet-b0/model/blocks_2/IdentityN_1:0 shape: (64, 56, 56, 144)
+[2020-07-21T00:10:44Z] 302586cb [RUNNING] ||  INFO: Built Squeeze and Excitation with tensor shape: (64, 1, 1, 144)
+[2020-07-21T00:10:44Z] 302586cb [RUNNING] ||  INFO: TpuBatchNormalization with num_shards_per_group 1
+[2020-07-21T00:10:44Z] 302586cb [RUNNING] ||  WARNING: From /run/determined/workdir/utils.py:160: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+[2020-07-21T00:10:44Z] 302586cb [RUNNING] ||  Instructions for updating:
+[2020-07-21T00:10:44Z] 302586cb [RUNNING] ||  Deprecated in favor of operator or tf.math.divide.
+[2020-07-21T00:10:44Z] 302586cb [RUNNING] ||  INFO: Project: efficientnet-b0/model/blocks_2/Add_1:0 shape: (64, 56, 56, 24)
+[2020-07-21T00:10:45Z] 302586cb [RUNNING] ||  INFO: block_3 survival_prob: 0.9625
+[2020-07-21T00:10:45Z] 302586cb [RUNNING] ||  INFO: Block input: efficientnet-b0/model/blocks_2/Add_1:0 shape: (64, 56, 56, 24)
+[2020-07-21T00:10:45Z] 302586cb [RUNNING] ||  INFO: Block input depth: 24 output depth: 40
+[2020-07-21T00:10:45Z] 302586cb [RUNNING] ||  INFO: TpuBatchNormalization with num_shards_per_group 1
+[2020-07-21T00:10:45Z] 302586cb [RUNNING] ||  INFO: Expand: efficientnet-b0/model/blocks_3/IdentityN:0 shape: (64, 56, 56, 144)
+[2020-07-21T00:10:45Z] 302586cb [RUNNING] ||  INFO: TpuBatchNormalization with num_shards_per_group 1
+[2020-07-21T00:10:45Z] 302586cb [RUNNING] ||  INFO: DWConv: efficientnet-b0/model/blocks_3/IdentityN_1:0 shape: (64, 28, 28, 144)
+[2020-07-21T00:10:45Z] 302586cb [RUNNING] ||  INFO: Built Squeeze and Excitation with tensor shape: (64, 1, 1, 144)
+[2020-07-21T00:10:45Z] 302586cb [RUNNING] ||  INFO: TpuBatchNormalization with num_shards_per_group 1
+[2020-07-21T00:10:45Z] 302586cb [RUNNING] ||  INFO: Project: efficientnet-b0/model/blocks_3/Identity_2:0 shape: (64, 28, 28, 40)
+[2020-07-21T00:10:45Z] 302586cb [RUNNING] ||  INFO: block_4 survival_prob: 0.95
+[2020-07-21T00:10:45Z] 302586cb [RUNNING] ||  INFO: Block input: efficientnet-b0/model/blocks_3/Identity_2:0 shape: (64, 28, 28, 40)
+[2020-07-21T00:10:45Z] 302586cb [RUNNING] ||  INFO: Block input depth: 40 output depth: 40
+[2020-07-21T00:10:45Z] 302586cb [RUNNING] ||  INFO: TpuBatchNormalization with num_shards_per_group 1
+[2020-07-21T00:10:45Z] 302586cb [RUNNING] ||  INFO: Expand: efficientnet-b0/model/blocks_4/IdentityN:0 shape: (64, 28, 28, 240)
+[2020-07-21T00:10:45Z] 302586cb [RUNNING] ||  INFO: TpuBatchNormalization with num_shards_per_group 1
+[2020-07-21T00:10:45Z] 302586cb [RUNNING] ||  INFO: DWConv: efficientnet-b0/model/blocks_4/IdentityN_1:0 shape: (64, 28, 28, 240)
+[2020-07-21T00:10:45Z] 302586cb [RUNNING] ||  INFO: Built Squeeze and Excitation with tensor shape: (64, 1, 1, 240)
+[2020-07-21T00:10:45Z] 302586cb [RUNNING] ||  INFO: TpuBatchNormalization with num_shards_per_group 1
+[2020-07-21T00:10:45Z] 302586cb [RUNNING] ||  INFO: Project: efficientnet-b0/model/blocks_4/Add_1:0 shape: (64, 28, 28, 40)
+[2020-07-21T00:10:45Z] 302586cb [RUNNING] ||  INFO: block_5 survival_prob: 0.9375
+[2020-07-21T00:10:45Z] 302586cb [RUNNING] ||  INFO: Block input: efficientnet-b0/model/blocks_4/Add_1:0 shape: (64, 28, 28, 40)
+[2020-07-21T00:10:45Z] 302586cb [RUNNING] ||  INFO: Block input depth: 40 output depth: 80
+[2020-07-21T00:10:45Z] 302586cb [RUNNING] ||  INFO: TpuBatchNormalization with num_shards_per_group 1
+[2020-07-21T00:10:45Z] 302586cb [RUNNING] ||  INFO: Expand: efficientnet-b0/model/blocks_5/IdentityN:0 shape: (64, 28, 28, 240)
+[2020-07-21T00:10:45Z] 302586cb [RUNNING] ||  INFO: TpuBatchNormalization with num_shards_per_group 1
+[2020-07-21T00:10:45Z] 302586cb [RUNNING] ||  INFO: DWConv: efficientnet-b0/model/blocks_5/IdentityN_1:0 shape: (64, 14, 14, 240)
+[2020-07-21T00:10:45Z] 302586cb [RUNNING] ||  INFO: Built Squeeze and Excitation with tensor shape: (64, 1, 1, 240)
+[2020-07-21T00:10:45Z] 302586cb [RUNNING] ||  INFO: TpuBatchNormalization with num_shards_per_group 1
+[2020-07-21T00:10:45Z] 302586cb [RUNNING] ||  INFO: Project: efficientnet-b0/model/blocks_5/Identity_2:0 shape: (64, 14, 14, 80)
+[2020-07-21T00:10:45Z] 302586cb [RUNNING] ||  INFO: block_6 survival_prob: 0.925
+[2020-07-21T00:10:46Z] 302586cb [RUNNING] ||  INFO: Block input: efficientnet-b0/model/blocks_5/Identity_2:0 shape: (64, 14, 14, 80)
+[2020-07-21T00:10:46Z] 302586cb [RUNNING] ||  INFO: Block input depth: 80 output depth: 80
+[2020-07-21T00:10:46Z] 302586cb [RUNNING] ||  INFO: TpuBatchNormalization with num_shards_per_group 1
+[2020-07-21T00:10:46Z] 302586cb [RUNNING] ||  INFO: Expand: efficientnet-b0/model/blocks_6/IdentityN:0 shape: (64, 14, 14, 480)
+[2020-07-21T00:10:46Z] 302586cb [RUNNING] ||  INFO: TpuBatchNormalization with num_shards_per_group 1
+[2020-07-21T00:10:46Z] 302586cb [RUNNING] ||  INFO: DWConv: efficientnet-b0/model/blocks_6/IdentityN_1:0 shape: (64, 14, 14, 480)
+[2020-07-21T00:10:46Z] 302586cb [RUNNING] ||  INFO: Built Squeeze and Excitation with tensor shape: (64, 1, 1, 480)
+[2020-07-21T00:10:46Z] 302586cb [RUNNING] ||  INFO: TpuBatchNormalization with num_shards_per_group 1
+[2020-07-21T00:10:46Z] 302586cb [RUNNING] ||  INFO: Project: efficientnet-b0/model/blocks_6/Add_1:0 shape: (64, 14, 14, 80)
+[2020-07-21T00:10:46Z] 302586cb [RUNNING] ||  INFO: block_7 survival_prob: 0.9125
+[2020-07-21T00:10:46Z] 302586cb [RUNNING] ||  INFO: Block input: efficientnet-b0/model/blocks_6/Add_1:0 shape: (64, 14, 14, 80)
+[2020-07-21T00:10:46Z] 302586cb [RUNNING] ||  INFO: Block input depth: 80 output depth: 80
+[2020-07-21T00:10:46Z] 302586cb [RUNNING] ||  INFO: TpuBatchNormalization with num_shards_per_group 1
+[2020-07-21T00:10:46Z] 302586cb [RUNNING] ||  INFO: Expand: efficientnet-b0/model/blocks_7/IdentityN:0 shape: (64, 14, 14, 480)
+[2020-07-21T00:10:46Z] 302586cb [RUNNING] ||  INFO: TpuBatchNormalization with num_shards_per_group 1
+[2020-07-21T00:10:46Z] 302586cb [RUNNING] ||  INFO: DWConv: efficientnet-b0/model/blocks_7/IdentityN_1:0 shape: (64, 14, 14, 480)
+[2020-07-21T00:10:46Z] 302586cb [RUNNING] ||  INFO: Built Squeeze and Excitation with tensor shape: (64, 1, 1, 480)
+[2020-07-21T00:10:46Z] 302586cb [RUNNING] ||  INFO: TpuBatchNormalization with num_shards_per_group 1
+[2020-07-21T00:10:46Z] 302586cb [RUNNING] ||  INFO: Project: efficientnet-b0/model/blocks_7/Add_1:0 shape: (64, 14, 14, 80)
+[2020-07-21T00:10:46Z] 302586cb [RUNNING] ||  INFO: block_8 survival_prob: 0.9
+[2020-07-21T00:10:46Z] 302586cb [RUNNING] ||  INFO: Block input: efficientnet-b0/model/blocks_7/Add_1:0 shape: (64, 14, 14, 80)
+[2020-07-21T00:10:46Z] 302586cb [RUNNING] ||  INFO: Block input depth: 80 output depth: 112
+[2020-07-21T00:10:46Z] 302586cb [RUNNING] ||  INFO: TpuBatchNormalization with num_shards_per_group 1
+[2020-07-21T00:10:46Z] 302586cb [RUNNING] ||  INFO: Expand: efficientnet-b0/model/blocks_8/IdentityN:0 shape: (64, 14, 14, 480)
+[2020-07-21T00:10:46Z] 302586cb [RUNNING] ||  INFO: TpuBatchNormalization with num_shards_per_group 1
+[2020-07-21T00:10:46Z] 302586cb [RUNNING] ||  INFO: DWConv: efficientnet-b0/model/blocks_8/IdentityN_1:0 shape: (64, 14, 14, 480)
+[2020-07-21T00:10:46Z] 302586cb [RUNNING] ||  INFO: Built Squeeze and Excitation with tensor shape: (64, 1, 1, 480)
+[2020-07-21T00:10:46Z] 302586cb [RUNNING] ||  INFO: TpuBatchNormalization with num_shards_per_group 1
+[2020-07-21T00:10:46Z] 302586cb [RUNNING] ||  INFO: Project: efficientnet-b0/model/blocks_8/Identity_2:0 shape: (64, 14, 14, 112)
+[2020-07-21T00:10:46Z] 302586cb [RUNNING] ||  INFO: block_9 survival_prob: 0.8875000000000001
+[2020-07-21T00:10:46Z] 302586cb [RUNNING] ||  INFO: Block input: efficientnet-b0/model/blocks_8/Identity_2:0 shape: (64, 14, 14, 112)
+[2020-07-21T00:10:46Z] 302586cb [RUNNING] ||  INFO: Block input depth: 112 output depth: 112
+[2020-07-21T00:10:46Z] 302586cb [RUNNING] ||  INFO: TpuBatchNormalization with num_shards_per_group 1
+[2020-07-21T00:10:46Z] 302586cb [RUNNING] ||  INFO: Expand: efficientnet-b0/model/blocks_9/IdentityN:0 shape: (64, 14, 14, 672)
+[2020-07-21T00:10:46Z] 302586cb [RUNNING] ||  INFO: TpuBatchNormalization with num_shards_per_group 1
+[2020-07-21T00:10:47Z] 302586cb [RUNNING] ||  INFO: DWConv: efficientnet-b0/model/blocks_9/IdentityN_1:0 shape: (64, 14, 14, 672)
+[2020-07-21T00:10:47Z] 302586cb [RUNNING] ||  INFO: Built Squeeze and Excitation with tensor shape: (64, 1, 1, 672)
+[2020-07-21T00:10:47Z] 302586cb [RUNNING] ||  INFO: TpuBatchNormalization with num_shards_per_group 1
+[2020-07-21T00:10:47Z] 302586cb [RUNNING] ||  INFO: Project: efficientnet-b0/model/blocks_9/Add_1:0 shape: (64, 14, 14, 112)
+[2020-07-21T00:10:47Z] 302586cb [RUNNING] ||  INFO: block_10 survival_prob: 0.875
+[2020-07-21T00:10:47Z] 302586cb [RUNNING] ||  INFO: Block input: efficientnet-b0/model/blocks_9/Add_1:0 shape: (64, 14, 14, 112)
+[2020-07-21T00:10:47Z] 302586cb [RUNNING] ||  INFO: Block input depth: 112 output depth: 112
+[2020-07-21T00:10:47Z] 302586cb [RUNNING] ||  INFO: TpuBatchNormalization with num_shards_per_group 1
+[2020-07-21T00:10:47Z] 302586cb [RUNNING] ||  INFO: Expand: efficientnet-b0/model/blocks_10/IdentityN:0 shape: (64, 14, 14, 672)
+[2020-07-21T00:10:47Z] 302586cb [RUNNING] ||  INFO: TpuBatchNormalization with num_shards_per_group 1
+[2020-07-21T00:10:47Z] 302586cb [RUNNING] ||  INFO: DWConv: efficientnet-b0/model/blocks_10/IdentityN_1:0 shape: (64, 14, 14, 672)
+[2020-07-21T00:10:47Z] 302586cb [RUNNING] ||  INFO: Built Squeeze and Excitation with tensor shape: (64, 1, 1, 672)
+[2020-07-21T00:10:47Z] 302586cb [RUNNING] ||  INFO: TpuBatchNormalization with num_shards_per_group 1
+[2020-07-21T00:10:47Z] 302586cb [RUNNING] ||  INFO: Project: efficientnet-b0/model/blocks_10/Add_1:0 shape: (64, 14, 14, 112)
+[2020-07-21T00:10:47Z] 302586cb [RUNNING] ||  INFO: block_11 survival_prob: 0.8625
+[2020-07-21T00:10:47Z] 302586cb [RUNNING] ||  INFO: Block input: efficientnet-b0/model/blocks_10/Add_1:0 shape: (64, 14, 14, 112)
+[2020-07-21T00:10:47Z] 302586cb [RUNNING] ||  INFO: Block input depth: 112 output depth: 192
+[2020-07-21T00:10:47Z] 302586cb [RUNNING] ||  INFO: TpuBatchNormalization with num_shards_per_group 1
+[2020-07-21T00:10:47Z] 302586cb [RUNNING] ||  INFO: Expand: efficientnet-b0/model/blocks_11/IdentityN:0 shape: (64, 14, 14, 672)
+[2020-07-21T00:10:47Z] 302586cb [RUNNING] ||  INFO: TpuBatchNormalization with num_shards_per_group 1
+[2020-07-21T00:10:47Z] 302586cb [RUNNING] ||  INFO: DWConv: efficientnet-b0/model/blocks_11/IdentityN_1:0 shape: (64, 7, 7, 672)
+[2020-07-21T00:10:47Z] 302586cb [RUNNING] ||  INFO: Built Squeeze and Excitation with tensor shape: (64, 1, 1, 672)
+[2020-07-21T00:10:47Z] 302586cb [RUNNING] ||  INFO: TpuBatchNormalization with num_shards_per_group 1
+[2020-07-21T00:10:47Z] 302586cb [RUNNING] ||  INFO: Project: efficientnet-b0/model/blocks_11/Identity_2:0 shape: (64, 7, 7, 192)
+[2020-07-21T00:10:47Z] 302586cb [RUNNING] ||  INFO: block_12 survival_prob: 0.8500000000000001
+[2020-07-21T00:10:47Z] 302586cb [RUNNING] ||  INFO: Block input: efficientnet-b0/model/blocks_11/Identity_2:0 shape: (64, 7, 7, 192)
+[2020-07-21T00:10:47Z] 302586cb [RUNNING] ||  INFO: Block input depth: 192 output depth: 192
+[2020-07-21T00:10:47Z] 302586cb [RUNNING] ||  INFO: TpuBatchNormalization with num_shards_per_group 1
+[2020-07-21T00:10:47Z] 302586cb [RUNNING] ||  INFO: Expand: efficientnet-b0/model/blocks_12/IdentityN:0 shape: (64, 7, 7, 1152)
+[2020-07-21T00:10:47Z] 302586cb [RUNNING] ||  INFO: TpuBatchNormalization with num_shards_per_group 1
+[2020-07-21T00:10:47Z] 302586cb [RUNNING] ||  INFO: DWConv: efficientnet-b0/model/blocks_12/IdentityN_1:0 shape: (64, 7, 7, 1152)
+[2020-07-21T00:10:48Z] 302586cb [RUNNING] ||  INFO: Built Squeeze and Excitation with tensor shape: (64, 1, 1, 1152)
+[2020-07-21T00:10:48Z] 302586cb [RUNNING] ||  INFO: TpuBatchNormalization with num_shards_per_group 1
+[2020-07-21T00:10:48Z] 302586cb [RUNNING] ||  INFO: Project: efficientnet-b0/model/blocks_12/Add_1:0 shape: (64, 7, 7, 192)
+[2020-07-21T00:10:48Z] 302586cb [RUNNING] ||  INFO: block_13 survival_prob: 0.8375
+[2020-07-21T00:10:48Z] 302586cb [RUNNING] ||  INFO: Block input: efficientnet-b0/model/blocks_12/Add_1:0 shape: (64, 7, 7, 192)
+[2020-07-21T00:10:48Z] 302586cb [RUNNING] ||  INFO: Block input depth: 192 output depth: 192
+[2020-07-21T00:10:48Z] 302586cb [RUNNING] ||  INFO: TpuBatchNormalization with num_shards_per_group 1
+[2020-07-21T00:10:48Z] 302586cb [RUNNING] ||  INFO: Expand: efficientnet-b0/model/blocks_13/IdentityN:0 shape: (64, 7, 7, 1152)
+[2020-07-21T00:10:48Z] 302586cb [RUNNING] ||  INFO: TpuBatchNormalization with num_shards_per_group 1
+[2020-07-21T00:10:48Z] 302586cb [RUNNING] ||  INFO: DWConv: efficientnet-b0/model/blocks_13/IdentityN_1:0 shape: (64, 7, 7, 1152)
+[2020-07-21T00:10:48Z] 302586cb [RUNNING] ||  INFO: Built Squeeze and Excitation with tensor shape: (64, 1, 1, 1152)
+[2020-07-21T00:10:48Z] 302586cb [RUNNING] ||  INFO: TpuBatchNormalization with num_shards_per_group 1
+[2020-07-21T00:10:48Z] 302586cb [RUNNING] ||  INFO: Project: efficientnet-b0/model/blocks_13/Add_1:0 shape: (64, 7, 7, 192)
+[2020-07-21T00:10:48Z] 302586cb [RUNNING] ||  INFO: block_14 survival_prob: 0.8250000000000001
+[2020-07-21T00:10:48Z] 302586cb [RUNNING] ||  INFO: Block input: efficientnet-b0/model/blocks_13/Add_1:0 shape: (64, 7, 7, 192)
+[2020-07-21T00:10:48Z] 302586cb [RUNNING] ||  INFO: Block input depth: 192 output depth: 192
+[2020-07-21T00:10:48Z] 302586cb [RUNNING] ||  INFO: TpuBatchNormalization with num_shards_per_group 1
+[2020-07-21T00:10:48Z] 302586cb [RUNNING] ||  INFO: Expand: efficientnet-b0/model/blocks_14/IdentityN:0 shape: (64, 7, 7, 1152)
+[2020-07-21T00:10:48Z] 302586cb [RUNNING] ||  INFO: TpuBatchNormalization with num_shards_per_group 1
+[2020-07-21T00:10:48Z] 302586cb [RUNNING] ||  INFO: DWConv: efficientnet-b0/model/blocks_14/IdentityN_1:0 shape: (64, 7, 7, 1152)
+[2020-07-21T00:10:48Z] 302586cb [RUNNING] ||  INFO: Built Squeeze and Excitation with tensor shape: (64, 1, 1, 1152)
+[2020-07-21T00:10:48Z] 302586cb [RUNNING] ||  INFO: TpuBatchNormalization with num_shards_per_group 1
+[2020-07-21T00:10:48Z] 302586cb [RUNNING] ||  INFO: Project: efficientnet-b0/model/blocks_14/Add_1:0 shape: (64, 7, 7, 192)
+[2020-07-21T00:10:48Z] 302586cb [RUNNING] ||  INFO: block_15 survival_prob: 0.8125
+[2020-07-21T00:10:48Z] 302586cb [RUNNING] ||  INFO: Block input: efficientnet-b0/model/blocks_14/Add_1:0 shape: (64, 7, 7, 192)
+[2020-07-21T00:10:48Z] 302586cb [RUNNING] ||  INFO: Block input depth: 192 output depth: 320
+[2020-07-21T00:10:49Z] 302586cb [RUNNING] ||  INFO: TpuBatchNormalization with num_shards_per_group 1
+[2020-07-21T00:10:49Z] 302586cb [RUNNING] ||  INFO: Expand: efficientnet-b0/model/blocks_15/IdentityN:0 shape: (64, 7, 7, 1152)
+[2020-07-21T00:10:49Z] 302586cb [RUNNING] ||  INFO: TpuBatchNormalization with num_shards_per_group 1
+[2020-07-21T00:10:49Z] 302586cb [RUNNING] ||  INFO: DWConv: efficientnet-b0/model/blocks_15/IdentityN_1:0 shape: (64, 7, 7, 1152)
+[2020-07-21T00:10:49Z] 302586cb [RUNNING] ||  INFO: Built Squeeze and Excitation with tensor shape: (64, 1, 1, 1152)
+[2020-07-21T00:10:49Z] 302586cb [RUNNING] ||  INFO: TpuBatchNormalization with num_shards_per_group 1
+[2020-07-21T00:10:49Z] 302586cb [RUNNING] ||  INFO: Project: efficientnet-b0/model/blocks_15/Identity_2:0 shape: (64, 7, 7, 320)
+[2020-07-21T00:10:49Z] 302586cb [RUNNING] ||  INFO: TpuBatchNormalization with num_shards_per_group 1
+[2020-07-21T00:10:49Z] 302586cb [RUNNING] ||  INFO: base_learning_rate = 0.016000
+[2020-07-21T00:10:49Z] 302586cb [RUNNING] ||  INFO: Learning rate warmup_epochs: 5
+[2020-07-21T00:10:49Z] 302586cb [RUNNING] ||  INFO: Using RMSProp optimizer
+[2020-07-21T00:10:56Z] 302586cb [RUNNING] ||  WARNING: From /opt/conda/lib/python3.6/site-packages/tensorflow_core/python/training/rmsprop.py:119: calling Ones.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+[2020-07-21T00:10:56Z] 302586cb [RUNNING] ||  Instructions for updating:
+[2020-07-21T00:10:56Z] 302586cb [RUNNING] ||  Call initializer instance with the dtype argument instead of passing it to the constructor
+[2020-07-21T00:11:05Z] 302586cb [RUNNING] ||  INFO: number of trainable parameters: 5288548
+[2020-07-21T00:11:05Z] 302586cb [RUNNING] ||  INFO: Done calling model_fn.
+[2020-07-21T00:11:05Z] 302586cb [RUNNING] ||  INFO: Create CheckpointSaverHook.
+[2020-07-21T00:11:08Z] 302586cb [RUNNING] ||  INFO: Running workload <RUN_STEP (100): (25,25,1)>
+[2020-07-21T00:11:10Z] 302586cb [RUNNING] ||  INFO: Graph was finalized.
+[2020-07-21T00:11:10Z] 302586cb [RUNNING] ||  2020-07-21 00:11:10.831835: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+[2020-07-21T00:11:10Z] 302586cb [RUNNING] ||  2020-07-21 00:11:10.877440: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2592000000 Hz
+[2020-07-21T00:11:10Z] 302586cb [RUNNING] ||  2020-07-21 00:11:10.881129: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55b6bfc07b50 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+[2020-07-21T00:11:10Z] 302586cb [RUNNING] ||  2020-07-21 00:11:10.881238: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+[2020-07-21T00:11:17Z] 302586cb [RUNNING] ||  INFO: Running local_init_op.
+[2020-07-21T00:11:17Z] 302586cb [RUNNING] ||  INFO: Done running local_init_op.
+[2020-07-21T00:11:36Z] 302586cb [RUNNING] ||  INFO: Saving checkpoints for 0 into /tmp/tmpcl5drjkh0/model.ckpt.
+[2020-07-21T00:11:49Z] 302586cb [RUNNING] ||  2020-07-21 00:11:49.716274: W tensorflow/core/platform/cloud/google_auth_provider.cc:178] All attempts to get a Google authentication bearer token failed, returning an empty token. Retrieving token from files failed with "Not found: Could not locate the credentials file.". Retrieving token from GCE failed with "Aborted: All 10 retry attempts failed. The last failure: Unavailable: Error executing an HTTP request: libcurl code 6 meaning 'Couldn't resolve host name', error details: Couldn't resolve host 'metadata'".
+[2020-07-21T00:12:02Z] 302586cb [RUNNING] ||  WARNING: Passing a `GraphDef` to the SummaryWriter is deprecated. Pass a `Graph` object instead, such as `sess.graph`.
+[2020-07-21T00:12:20Z] 302586cb [TERMINATED] || container failed with non-zero exit code: container failed with non-zero exit code: 137
