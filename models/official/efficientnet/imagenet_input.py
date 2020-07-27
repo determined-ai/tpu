@@ -73,7 +73,8 @@ class ImageNetTFExampleInput(six.with_metaclass(abc.ABCMeta, object)):
                mixup_alpha=0.0,
                randaug_num_layers=None,
                randaug_magnitude=None,
-               resize_method=None):
+               resize_method=None,
+               context=None):
     """Constructor.
 
     Args:
@@ -112,6 +113,7 @@ class ImageNetTFExampleInput(six.with_metaclass(abc.ABCMeta, object)):
     self.randaug_num_layers = randaug_num_layers
     self.randaug_magnitude = randaug_magnitude
     self.resize_method = resize_method
+    self.context = context
 
   def set_shapes(self, batch_size, images, labels):
     """Statically set the batch_size dimension."""
@@ -212,7 +214,7 @@ class ImageNetTFExampleInput(six.with_metaclass(abc.ABCMeta, object)):
     """
     return
 
-  def input_fn(self, params):
+  def input_fn(self):
     """Input function which provides a single batch for train or eval.
 
     Args:
@@ -226,16 +228,13 @@ class ImageNetTFExampleInput(six.with_metaclass(abc.ABCMeta, object)):
     # Retrieves the batch size for the current shard. The # of shards is
     # computed according to the input pipeline deployment. See
     # tf.estimator.tpu.RunConfig for details.
-    batch_size = params['batch_size']
+    batch_size = self.context.get_per_slot_batch_size()
 
-    if 'context' in params:
-      current_host = params['context'].current_input_fn_deployment()[1]
-      num_hosts = params['context'].num_hosts
-    else:
-      current_host = 0
-      num_hosts = 1
+    current_host = 0
+    num_hosts = 1
 
     dataset = self.make_source_dataset(current_host, num_hosts)
+    self.context.wrap_dataset(dataset)
 
     # Use the fused map-and-batch operation.
     #
@@ -303,7 +302,8 @@ class ImageNetInput(ImageNetTFExampleInput):
                mixup_alpha=0.0,
                randaug_num_layers=None,
                randaug_magnitude=None,
-               resize_method=None):
+               resize_method=None,
+               context=None):
     """Create an input from TFRecord files.
 
     Args:
@@ -342,7 +342,8 @@ class ImageNetInput(ImageNetTFExampleInput):
         augment_name=augment_name,
         mixup_alpha=mixup_alpha,
         randaug_num_layers=randaug_num_layers,
-        randaug_magnitude=randaug_magnitude)
+        randaug_magnitude=randaug_magnitude,
+        context=context)
     self.data_dir = data_dir
     if self.data_dir == 'null' or not self.data_dir:
       self.data_dir = None

@@ -488,7 +488,7 @@ def model_fn(features, labels, mode, params):
           'top_5_accuracy': top_5_accuracy,
       }
 
-    eval_metrics = (metric_fn, [labels, logits])
+    eval_metrics = metric_fn(labels, logits)
 
   num_params = np.sum([np.prod(v.shape) for v in tf.trainable_variables()])
   logging.info('number of trainable parameters: %d', num_params)
@@ -503,13 +503,12 @@ def model_fn(features, labels, mode, params):
   else:
     scaffold_fn = None
 
-  return tf.estimator.tpu.TPUEstimatorSpec(
+  return tf.estimator.EstimatorSpec(
       mode=mode,
       loss=loss,
       train_op=train_op,
-      host_call=host_call,
-      eval_metrics=eval_metrics,
-      scaffold_fn=scaffold_fn)
+      eval_metric_ops=eval_metrics,
+    )
 
 
 def _verify_non_empty_string(value, field_name):
@@ -637,14 +636,11 @@ def main(unused_argv):
   # Initializes model parameters.
   params = dict(
       steps_per_epoch=FLAGS.num_train_images / FLAGS.train_batch_size,
+      batch_size=FLAGS.train_batch_size,
       use_bfloat16=FLAGS.use_bfloat16)
-  est = tf.estimator.tpu.TPUEstimator(
-      use_tpu=FLAGS.use_tpu,
+  est = tf.estimator.Estimator(
       model_fn=model_fn,
       config=config,
-      train_batch_size=FLAGS.train_batch_size,
-      eval_batch_size=FLAGS.eval_batch_size,
-      export_to_tpu=FLAGS.export_to_tpu,
       params=params)
 
   if (FLAGS.model_name.startswith('efficientnet-lite') or
@@ -793,3 +789,4 @@ def main(unused_argv):
 if __name__ == '__main__':
   logging.set_verbosity(logging.INFO)
   app.run(main)
+

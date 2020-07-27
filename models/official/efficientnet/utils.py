@@ -63,7 +63,8 @@ def build_learning_rate(initial_lr,
   return lr
 
 
-def build_optimizer(learning_rate,
+def build_optimizer(context,
+                    learning_rate,
                     optimizer_name='rmsprop',
                     decay=0.9,
                     epsilon=0.001,
@@ -83,7 +84,7 @@ def build_optimizer(learning_rate,
   else:
     logging.fatal('Unknown optimizer: %s', optimizer_name)
 
-  return optimizer
+  return context.wrap_optimizer(optimizer)
 
 
 class TpuBatchNormalization(tf.layers.BatchNormalization):
